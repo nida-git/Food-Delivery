@@ -1,0 +1,28 @@
+{
+  "name": "fooddelivery",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx parcel index.html --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nida-git/Food-Delivery.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/nida-git/Food-Delivery/issues"
+  },
+  "homepage": "https://github.com/nida-git/Food-Delivery#readme",
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
