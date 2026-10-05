@@ -98,6 +98,95 @@
     
 }
 
+.shimmer{
+    font-size: 50px;
+    background-color: aliceblue;
+  
+}
+
+.food-shimmer{
+    height: 300px;
+    width: 100vw;
+    background-color: #010101cd;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 90px;
+
+
+}
+.circle-container{
+    height: 150px ;
+    width: 150px;
+    border-radius: 50%;
+    background-color: #3c3b3b;
+}
+.res-shimmer{
+   background-color: #0e0e0eec;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+.square-container{
+     border: 2px solid grey; 
+
+    width: 320px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 14px;
+
+}
+
+/* .square-container::before{
+    content: " ";
+    z-index: 100;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        white,
+        grey,
+        white
+    );
+    transform: skew(135deg);
+    display: block;
+    overflow: hidden;
+    
+    animation: shimmer 2s ease-in-out infinite ;
+} */
+/* 
+.circle-container::before{
+    content: " ";
+    z-index: 100;
+    width: 30px;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        white,
+        grey,
+        white
+    );
+    transform: skew(135deg);
+    display: block;
+    overflow: hidden;
+    
+    animation: shimmer 2s ease-in-out infinite ;
+} */
+
+@keyframes shimmer {
+    from{
+        transform: translateX(0px);
+  
+    }
+    to{
+        transform: translateX(600px);
+   
+    }
+}
  .top-food{
     height: 300px;
     background-color: #010101cd;
@@ -145,9 +234,19 @@
     color: rgb(59, 237, 59);; 
 } 
 
+.filter-btn{
+    padding: 30px;
+    color: grey;
+    background-color: #000000da;
+    border: 1px dotted green;
+    border-radius: 12px;
+    font-size: 22px;
+}
+
 .restaurants{
     background-color: #0e0e0eec;
     padding: 40px;
+    /* margin-top: 80px; */
    
     display: flex;
     flex-direction: column;
@@ -181,6 +280,8 @@
     letter-spacing: 1.3px;
     line-height: 2;
     font-size: 25px;
+    border-radius: 14px;
+    overflow: hidden;
 
 }
 .card-container:hover{

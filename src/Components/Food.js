@@ -1,12 +1,10 @@
-import { foodURL } from "../utils/constants";
+import { foodURL, imageURL } from "../utils/constants";
 
 const Food = ({foodDetails})=>{
-    const {itemName, imageId} = foodDetails
+  
     return <div className="food-item"  >
 
-        <img src= {foodURL + imageId} />
-        {console.log(foodURL + imageId)}
-        <p> {itemName}</p>
+        <img src= {imageURL + foodDetails?.imageId} />
     </div>
 }
 
