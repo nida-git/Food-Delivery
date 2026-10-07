@@ -5,19 +5,19 @@
 .header{
     height: 80px;
     width: 100vw;
-    background: #000;
+    background: #477B44;
     display: flex;
     align-items: center;
     flex-grow: 1;
-    position: fixed;
-    top: 0px;
+    /* position: fixed;
+    top: 0px; */
     z-index: 100;
     border: 2px solid #3c3b3b;
 
 }
 .logo{
     font-family: cursive;
-    color: rgb(59, 237, 59);
+    color: white;
     font-size: 40px;
     height: 100%;
     display: flex;
@@ -45,7 +45,11 @@
     color: rgb(59, 237, 59);
     flex-grow: 1;
     font-size: 29px;
+    text-decoration: none;
    
+}
+.nav-bar > ul > li > Link{
+       color: rgb(59, 237, 59);
 }
 
 .nav-bar > ul > li:hover{
@@ -141,23 +145,26 @@
 
 }
 
-/* .square-container::before{
+.square-container::before{
     content: " ";
     z-index: 100;
     width: 30px;
     height: 100%;
     background: linear-gradient(
         to right,
-        white,
         grey,
-        white
+        black,
+        grey,
+        
     );
     transform: skew(135deg);
     display: block;
+    position: relative;
     overflow: hidden;
+
     
     animation: shimmer 2s ease-in-out infinite ;
-} */
+}
 /* 
 .circle-container::before{
     content: " ";
@@ -179,11 +186,11 @@
 
 @keyframes shimmer {
     from{
-        transform: translateX(0px);
+        left: 10px;
   
     }
     to{
-        transform: translateX(600px);
+        left: 300px;
    
     }
 }
@@ -193,7 +200,7 @@
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-     color: rgb(59, 237, 59);
+     color: #A2C98A;
     justify-content: space-around;
     font-family: monospace ;
       margin-top: 90px;
@@ -244,7 +251,7 @@
 }
 
 .restaurants{
-    background-color: #0e0e0eec;
+    background-color: #477B44;
     padding: 40px;
     /* margin-top: 80px; */
    
@@ -260,7 +267,7 @@
 
 }
 .res-heading > h2{
-    color: rgb(59, 237, 59);
+    color: white;
     font-size: 40px;
    
 }
@@ -272,21 +279,25 @@
   
 }
 .card-container {
-     border: 2px solid green; 
-    color: rgb(59, 237, 59);
+     border: 2px solid rgba(0, 128, 0, 0.18); 
+    color: white;
     width: 320px;
     padding: 10px;
+    font-family: Georgia, Times, 'Times New Roman', serif;
 
     letter-spacing: 1.3px;
     line-height: 2;
     font-size: 25px;
     border-radius: 14px;
     overflow: hidden;
+     box-shadow: 0 0 3px rgba(247, 248, 247, 0.765);
+     transform: scale(1);
 
 }
 .card-container:hover{
-    transform: scale(0.900011111);
-       box-shadow: 0 0 6px green;
+    transform: scale(1.02);
+     box-shadow: 0 0 10px rgba(247, 248, 247, 0.765);
+      
        border-radius: 12px;
 }
 .card-container > img{
@@ -295,8 +306,22 @@
 }
 
 .card-container > .price{
-    color: red;
+    color: black;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.688);
     font-size: 1.5rem;
+}
+.text-div{
+    height: 50%;
+    width: 90%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    overflow: hidden;
+    font-size: 22px;
 }
 .footer{
     height: 100px;
@@ -306,4 +331,15 @@
     justify-content: center;
     align-items: center;
     font-size: 30px;
+}
+
+.contact-us{
+    height: 40vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
 }

@@ -65,7 +65,7 @@ if(restaurantArr == null){
 
   return (
     <div>
-      <div className="top-food">
+      {/* <div className="top-food">
         <div className="top-heading">
           <h2> Our Top foods</h2>
         </div>
@@ -74,7 +74,7 @@ if(restaurantArr == null){
             return <Food foodDetails={elem} key={elem.id} />;
           })}
         </div>
-      </div>
+      </div> */}
       <div className="restaurants">
         <button className="filter-btn" onClick={handleClick}>Filter by price</button>
         <div className="res-heading">

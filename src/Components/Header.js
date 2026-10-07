@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { dummyProfile, logoURL, searchIcon } from "../utils/constants";
 
 const Header = () => {
@@ -9,10 +10,10 @@ const Header = () => {
       </div>
       <div className="nav-bar">
         <ul>
-          <li>Home</li>
-          <li>Menu</li>
-          <li>Contact</li>
-          <li>Shops</li>
+          <li> <Link to="/" >Home </Link> </li>
+          <li> <Link to="/about"> About </Link> </li>
+          <li> <Link to="/contact" >Contact </Link> </li>
+          <li> <Link to="/cart">Shops</Link> </li>
         </ul>
       </div>
       <div className="search-icon">
