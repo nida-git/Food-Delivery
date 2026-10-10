@@ -7,6 +7,7 @@ import Contact from "./src/Components/Contact";
 import Body from "./src/Components/Body";
 import Cart from "./src/Components/Cart";
 import ErrorPage from "./src/Components/ErrorPage";
+import RestaurantMenuPage from "./src/Components/RestaurantMenuPage";
 
 const routerList = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const routerList = createBrowserRouter([
       {
         path: "/cart",
         element: <Cart/>
+      },
+      {
+        path: "/menu/:restaurantId",
+        element: <RestaurantMenuPage/>
       }
     ],
     errorElement: <ErrorPage/>

@@ -3,6 +3,7 @@ import Card from "./Card";
 import Food from "./Food";
 import { fetchDataURL } from "../utils/constants";
 import { Circles, Squares } from "./Shimmer";
+import { Link } from "react-router";
 
 const Body = () => {
   const [restaurantArr, setRestaurantArr] = useState(null);
@@ -82,7 +83,7 @@ if(restaurantArr == null){
         </div>
         <div className="res-cards">
           {restaurantArr.map((elem) => {
-            return <Card resDetails={elem} key={elem.info.id} />;
+            return <Link to= {`/menu/${elem.info.id}`} key={elem.info.id} >  <Card resDetails={elem}  /> </Link>
           })}
         </div>
       </div>
