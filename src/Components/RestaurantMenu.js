@@ -1,7 +1,11 @@
-import { baseURL } from "../utils/constants"
+import { useState } from "react";
+import { baseURL } from "../utils/constants";
+
+
+
 
 const RestaurantMenu =({details})=>{
-    const {name, city, cloudinaryImageId , costForTwoMessage , avgRating, totalRatingsString , cuisines} = details
+    const {name, city, cloudinaryImageId , costForTwoMessage , avgRating, totalRatingsString , cuisines} = details.data.cards[2].card.card.info
     return <div className="menu-container-div" >
         <div className="menu-container" >
            <h1>  {name} </h1>
