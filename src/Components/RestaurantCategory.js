@@ -1,17 +1,20 @@
 import MenuItems from "./menuItems";
 import { useState } from "react";
 
-const RestaurantCategory = ({ catDetails }) => {
-    const [showItem, setShowItem] = useState(true)
+const RestaurantCategory = ({ catDetails , command }) => {
+    const [showItem, setShowItem] = useState(false)
   const { title, itemCards } = catDetails;
+    console.log(command)
   return (
     <div className="acc-container">
-      <div className="accordian-head">
+      <div onClick={()=>{
+        setShowItem(!showItem)
+      }} className="accordian-head">
         <h2> {title}</h2>
         <p> 🔽 </p>
       </div>
       <div className="accordian-body">
-        {showItem? <div> {itemCards.map((elem) => {
+        {command ? <div> {itemCards.map((elem) => {
           return <MenuItems key={elem.card.info.id} itemDetails={elem} />;
         })} </div> : <div></div> }
        

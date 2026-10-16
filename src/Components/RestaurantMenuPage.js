@@ -6,6 +6,7 @@ import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenuPage = () => {
   const [menu, setMenu] = useState(null);
+  const [showIndex, setShowIndex] = useState(1)
   const { restaurantId } = useParams();
 
   async function fetchMenu() {
@@ -41,10 +42,12 @@ const RestaurantMenuPage = () => {
         <RestaurantMenu details={menu} />
       </div>
       <div className="res-category" >
-        {filterredArr.map((elem) => {
+        {filterredArr.map((elem , index) => {
           console.log(elem.card.card);
           return (
             <RestaurantCategory
+            command ={showIndex === index ?  "true" : "false"}
+          
               key={elem.card.card.categoryId}
               catDetails={elem.card.card}
             />
