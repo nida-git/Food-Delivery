@@ -1,22 +1,21 @@
 import MenuItems from "./menuItems";
+import { useState } from "react";
 
 const RestaurantCategory = ({ catDetails }) => {
-
+    const [showItem, setShowItem] = useState(true)
   const { title, itemCards } = catDetails;
-  console.log("running");
   return (
-    <div>
-        <div className="accordian-head" >
-   <h2> {title}</h2>
-        </div>
-        <div className="accordian-body">
-            {itemCards.map(()=>{
-                return <MenuItems />
-            })}
-        </div>
-   
-
-     
+    <div className="acc-container">
+      <div className="accordian-head">
+        <h2> {title}</h2>
+        <p> 🔽 </p>
+      </div>
+      <div className="accordian-body">
+        {showItem? <div> {itemCards.map((elem) => {
+          return <MenuItems key={elem.card.info.id} itemDetails={elem} />;
+        })} </div> : <div></div> }
+       
+      </div>
     </div>
   );
 };
