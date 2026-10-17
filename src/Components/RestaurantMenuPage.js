@@ -46,7 +46,10 @@ const RestaurantMenuPage = () => {
           console.log(elem.card.card);
           return (
             <RestaurantCategory
-            command ={showIndex === index ?  "true" : "false"}
+            command ={index == showIndex ?  "true" : "false"}
+            showIndex = {()=>{
+              setShowIndex( showIndex === index ? null : index)
+            }}
           
               key={elem.card.card.categoryId}
               catDetails={elem.card.card}

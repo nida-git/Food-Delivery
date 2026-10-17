@@ -1,8 +1,12 @@
 
+import { useContext } from "react";
 import { baseURL } from "../utils/constants";
+import UserContext from "../utils/UserContext";
 
 const MenuItems = ({ itemDetails }) => {
   const { name, imageId, defaultPrice, description, ratings } = itemDetails.card.info;
+
+  const userData = useContext(UserContext)
 
 
   return (
@@ -14,6 +18,7 @@ const MenuItems = ({ itemDetails }) => {
            ⭐ {ratings.aggregatedRating.rating} ({ratings.aggregatedRating.ratingCountV2})
         </div>
         <div> {description} </div>
+        {userData.name}
       </div>
 
       <div className="item-img"> <img src= {baseURL + imageId} />  </div>
